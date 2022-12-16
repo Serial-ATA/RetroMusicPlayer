@@ -40,6 +40,7 @@ android {
             signingConfig releaseSigning
         }
         debug {
+            debuggable true
             signingConfig releaseSigning
             applicationIdSuffix '.debug'
             versionNameSuffix ' DEBUG'
