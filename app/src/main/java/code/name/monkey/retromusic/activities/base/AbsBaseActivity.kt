@@ -119,6 +119,8 @@ abstract class AbsBaseActivity : AbsThemeActivity() {
                             this@AbsBaseActivity, Manifest.permission.READ_EXTERNAL_STORAGE,
                         ) || ActivityCompat.shouldShowRequestPermissionRationale(
                             this@AbsBaseActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        ) || ActivityCompat.shouldShowRequestPermissionRationale(
+                            this@AbsBaseActivity, Manifest.permission.READ_MEDIA_AUDIO,
                         )
                     ) {
                         // User has deny from permission dialog

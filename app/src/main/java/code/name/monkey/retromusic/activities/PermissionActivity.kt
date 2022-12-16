@@ -118,6 +118,10 @@ class PermissionActivity : AbsMusicServiceActivity() {
     }
 
     private fun hasStoragePermission(): Boolean {
+        if (VersionUtils.hasTiramisu()) {
+            return ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_AUDIO) == PackageManager.PERMISSION_GRANTED
+        }
+
         return ActivityCompat.checkSelfPermission(this,
             Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
     }
